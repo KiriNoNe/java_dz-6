@@ -13,6 +13,15 @@ public class Main {
             System.out.println(item.getMarka());
             System.out.println(item.getModel());
         }
+
+        System.out.println("Найдено каких-то машин...");
+        Car[] Cars2 = getCarByBrendAndYearOperational(cars, "Lada", 20);
+        System.out.println("Найдено lad: "+Cars2.length);
+        for (Car item : Cars2){
+            System.out.println(item.getId());
+            System.out.println(item.getMarka());
+            System.out.println(item.getModel());
+        }
     }
     
     public static Car[] getCarByBrend(Car[] cars, String brend){
@@ -28,6 +37,25 @@ public class Main {
         
         for (Car car : cars){
             if(car.getMarka().equalsIgnoreCase(brend)){
+                result[index++] = car;
+            } 
+        }
+        
+        return result;
+    }
+    public static Car[] getCarByBrendAndYearOperational(Car[] cars, String brend, int years){
+        int count = 0;
+        for (Car car: cars){
+            if((car.getMarka().equalsIgnoreCase(brend)) && ((2025 - car.getYear()) >= years)){
+                count++;
+            }
+        }
+
+        Car[] result = new Car[count];
+        int index = 0;
+        
+        for (Car car : cars){
+            if((car.getMarka().equalsIgnoreCase(brend)) && ((2025 - car.getYear()) >= years)){
                 result[index++] = car;
             } 
         }
