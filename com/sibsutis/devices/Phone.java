@@ -22,7 +22,7 @@ public class Phone extends Device{
     @Override
     public int hashCode(){
         int result =  Integer.hashCode(getId());
-        result = 31 * result + Intager.hashCode(getPrice());
+        result = 31 * result + Integer.hashCode(getPrice());
         result = 31* result + getIp().hashCode();
         return result;
     }

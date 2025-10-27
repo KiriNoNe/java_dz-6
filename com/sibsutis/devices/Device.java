@@ -1,6 +1,6 @@
 package com.sibsutis.devices;
 import com.sibsutis.Printable;
-abstract class Device implements Printable{
+abstract public class Device implements Printable{
     private int id;
     private int price;
     private String ip;
