@@ -12,12 +12,12 @@ public class Cache<T> {
         } 
         list.addLast(item);
     }
-    public bool remove(T item){
-        bool result = list.contains(item);
+    public boolean remove(T item){
+        boolean result = list.contains(item);
         list.remove(item);
         return result;
     }
-    public bool exists(T item){
+    public boolean exists(T item){
         return list.contains(item);
     }
     public T getFirst(){
@@ -26,7 +26,7 @@ public class Cache<T> {
         }
         return list.getFirst();
     }
-    public T getLasT(){
+    public T getLast(){
         if (list.isEmpty()){
             return null;
         }
@@ -40,6 +40,6 @@ public class Cache<T> {
             return null;
         }
     }
-    
+
 
 }
