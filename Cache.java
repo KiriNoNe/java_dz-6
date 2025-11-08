@@ -32,5 +32,14 @@ public class Cache<T> {
         }
         return list.getLast();
     }
+    public T getItemByIndex(int i){
+        if (list.size() > i){
+            return list.get(i);
+        }
+        else{
+            return null;
+        }
+    }
+    
 
 }
