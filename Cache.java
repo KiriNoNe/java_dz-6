@@ -12,4 +12,8 @@ public class Cache<T> {
         } 
         list.addLast(item);
     }
+    public bool remove(T item){
+        bool result = list.contains(item);
+        list.remove(item);
+    }
 }
