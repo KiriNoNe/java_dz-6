@@ -15,5 +15,9 @@ public class Cache<T> {
     public bool remove(T item){
         bool result = list.contains(item);
         list.remove(item);
+        return result;
+    }
+    public bool exists(T item){
+        return list.contains(item);
     }
 }
